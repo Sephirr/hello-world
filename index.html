@@ -5,6 +5,22 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Slime name generator</title>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <script>
+      function ooze(){
+      var rzeczownik = ["Sucker", "Spitter", "Sludge", "Slime", "Shambler", "Ooze", "Lurker","Goo","Elastoplast","Ectoplasm","Decay","Crawler","Blob"];
+  var przymiotnik =
+  ["Vile", "Scavenging", "Saturated", "Sap", "Rotting", "Ravenous",
+   "Primordial", "Prima", "Plague", "Noxious", "Nightmare", "Necrotic",
+   "Mwonvuli", "Muculent", "Monstrous", "Mephitic", "Living", "Irradiated",
+   "Inexorable", "Green", "Gobbling", "Gluttonous", "Glutinous", "Fungal",
+   "Evolving", "Earthen", "Creeping", "Corrosive", "Consumptive",
+   "Cloned"];
+   var rzecz1 = rzeczownik[Math.floor(Math.random()*rzeczownik.length)];
+   var przym1 = przymiotnik[Math.floor(Math.random()*przymiotnik.length)];
+   var outp ="Your slime name is "+ przym1+" "+rzecz1;
+   window.alert(outp);
+      }
+    </script>
 </head>
 
 <body>
@@ -15,19 +31,6 @@
   <br>
   <p align="middle">Click below to find your ooze/slime name!</p>
 <br>
-  <input type="button" id='script' name="scriptbutton" value=" Click here " onclick="goPython()">
-
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <script>
-        function goPython(){
-            $.ajax({
-              url: "ooze.py",
-             context: document.body
-            }).done(function() {
-             alert('finished python script');;
-            });
-        }
-    </script>
+<button type="button" onclick="ooze()">Try it</button>
 </body>
 </html>
